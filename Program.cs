@@ -24,6 +24,12 @@ namespace qwe
             a = b;
             b = tmp;
         }
+        public static void swap(ref char a, ref char b)
+        {
+            char tmp = a;
+            a = b;
+            b = tmp;
+        }
         static void Main(string[] args)
         {
             int l = 0;
@@ -63,7 +69,10 @@ namespace qwe
                 for(int j = 0;j < (s.Length-1);j++)
                 {
                     if (otvet.met[j] < otvet.met[j + 1])
-                        swap(ref otvet.met[j], ref otvet.met[j + 1]);
+                    {
+                        swap(ref otvet.met[j],ref otvet.met[j + 1]);
+                        swap(ref otvet.mas[j], ref otvet.mas[j + 1]);
+                    }
                 }
             }
             for(int i = 0;i < l;i++)
